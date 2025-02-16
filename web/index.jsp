@@ -6,11 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-// Variáveis
+<!--Variáveis-->
 <% 
    String nome = "Charles";
    String nome2 = "Jade";
    String nome3 = "Gécica";
+   String titleInput = "Título do Input: ";
 %>
 
 
@@ -36,27 +37,43 @@
 <!--        Formulário-->
         
         <div class="container">
-            <form>
+            <form method="POST" action="index.jsp">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nome</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="nomeParametro" id="nome" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" name="email" id="emai1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" name="senha" id="senha">
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
-              <button type="submit" class="btn btn-primary mb-3">Submit</button>
+             
+              <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+              
             </form>
+            
+            <p style="font-weight: bold">
+                <%= titleInput%>
+            </p>
+            
+            <p class="text-muted">
+            
+                <% 
+                    String textInput = request.getParameter("nomeParametro");
+                    out.println(textInput);
+                %>
+            
+            </p>
+            
         </div>
         
 <!--        Tabela-->
