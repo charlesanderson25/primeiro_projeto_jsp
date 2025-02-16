@@ -39,17 +39,17 @@
         <div class="container">
             <form method="POST" action="index.jsp">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Nome</label>
+                  <label for="exampleInputEmail1" class="form-label" style="font-weight: bold">Nome</label>
                 <input type="text" class="form-control" name="nomeParametro" id="nome" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div id="emailHelp" class="form-text">Informe seu nome</div>
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <label for="exampleInputEmail1" class="form-label" style="font-weight: bold">Email</label>
                 <input type="email" class="form-control" name="email" id="emai1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div id="emailHelp" class="form-text">Informe seu e-mail</div>
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <label for="exampleInputPassword1" class="form-label" style="font-weight: bold">Senha</label>
                 <input type="password" class="form-control" name="senha" id="senha">
               </div>
               <div class="mb-3 form-check">
