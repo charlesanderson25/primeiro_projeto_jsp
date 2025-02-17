@@ -4,6 +4,18 @@
     Author     : Charles
 --%>
 
+<!--
+<%-- 
+    Sintaxe dos elementos JSP
+    
+    Scriplet       <%      %>
+    Comentários    <%--  --%>
+    Diretivas      <%//@     %>
+    Declarações    <%//!     %>
+    Expressões     <%//=     %>
+--%>
+-->
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--Variáveis-->
