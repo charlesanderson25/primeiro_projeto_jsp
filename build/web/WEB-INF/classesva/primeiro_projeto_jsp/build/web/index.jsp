@@ -16,6 +16,14 @@
 --%>
 -->
 
+<%-- 
+    Dados para conexão com banco de dados:
+
+    URL: 127.0.0.1/3306
+    USER: root
+    PASSWORD: lakers25
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--Variáveis-->
