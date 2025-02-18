@@ -122,5 +122,23 @@
             </table>
         </div>
         
+<!--        Exemplos de utilização do Java no JSP-->
+        <div class="container">
+            <%! int contador = 0; %>
+            <p>
+                Visitas: <%= contador++ %>
+            </p>
+        </div>
+    
+        <div class="container">
+            <p>
+                <%
+                    int contador1 = 0;
+                    contador++;
+                    out.println("Visitas1: " + contador);
+                %>
+            </p>
+        </div>
+
     </body>
 </html>
