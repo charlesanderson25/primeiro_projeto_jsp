@@ -27,7 +27,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--Variáveis-->
-<% 
+<%! 
    String nome = "Charles";
    String nome2 = "Jade";
    String nome3 = "Gécica";
