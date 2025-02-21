@@ -24,6 +24,16 @@
     PASSWORD: lakers25
 --%>
 
+<%//import java.sql.*;%>
+<%//import br.com.info.dal.ModuloConexao;%>
+<%@page import="br.com.infox.dal.ModuloConexao"%>
+<%@page import="java.sql.Connection"%>
+
+<%
+    Connection conexao = ModuloConexao.conector();
+    String status = (conexao != null) ? "Conectado com sucesso!" : "Erro ao conectar com o banco de dados.";
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--Variáveis-->
@@ -40,9 +50,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Primeiro Projeto JSP</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        
+<!--        Teste Conexão-->
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <title>Teste de Conexão</title>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     </head>
     <body>
         
+<!--        Teste conexão-->
+        <div class="container text-center mt-5">
+        <h1>Status da Conexão com o Banco de Dados</h1>
+        <p class="fw-bold <%= (conexao != null) ? "text-success" : "text-danger" %>">
+            <%= status %>
+        </p>
+        </div>
+        <!--Fim teste conexão-->
         <div class="container text-center align-items-center">
             
         <h1>Cadastro de Pessoas</h1>
