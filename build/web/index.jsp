@@ -24,7 +24,9 @@
     PASSWORD: lakers25
 --%>
 
-<%//import java.sql.*;%>
+<%@page import="java.sql.*"%>
+<%@page import="br.com.infox.dal.ConsultaAlugueis"%>
+<%@page import="java.util.List"%>
 <%//import br.com.info.dal.ModuloConexao;%>
 <%@page import="br.com.infox.dal.ModuloConexao"%>
 <%@page import="java.sql.Connection"%>
@@ -120,35 +122,37 @@
         </div>
         
 <!--        Tabela-->
+
+        <%
+            List<String[]> alugueis = ConsultaAlugueis.getAlugueis();
+        %>
+
+
         
         <div class="container">
             <table class="table">
                 <thead>
                   <tr class="table-dark">
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Aluguel ID</th>
+                    <th scope="col">Cliente ID</th>
+                    <th scope="col">Hospedagem_ID</th>
+                    <th scope="col">Data Início</th>
+                    <th scope="col">Data Fim</th>
+                    <th scope="col">Preço Total</th>
                   </tr>
                 </thead>
                 <tbody>
+                    <% for (String[] aluguel : alugueis) { %>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td><%= aluguel[0]%></td>
+                    <td><%= aluguel[1]%></td>
+                    <td><%= aluguel[2]%></td>
+                    <td><%= aluguel[3]%></td>
+                    <td><%= aluguel[4]%></td>
+                    <td><%= aluguel[5]%></td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+                  <% } %>
                 </tbody>
             </table>
         </div>
